@@ -5,15 +5,11 @@ log = (ob) ->
   catch e
     # no console
 
+Session.set 'isMatchActive', false
+Session.set 'isPlayerWinning', false
+
+# Subscriptions
 Meteor.autosubscribe ->
+  Meteor.subscribe "players"
+  Meteor.subscribe "matches"
   Meteor.subscribe "answers"
-
-Template.answers.list = ->
-  _.pluck Answers.find({}).fetch(), 'answer'
-
-Template.buttons.events
-  'click .btn-choice' : ( event, template ) ->
-    answer = event.currentTarget.id
-    console.log "Answer is #{answer}"
-    Answers.insert 
-      answer : answer

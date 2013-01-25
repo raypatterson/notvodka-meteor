@@ -15,7 +15,7 @@ Answer =
   playerId: PlayerId
   type: AnswerType
   
-Matche = 
+Matches = 
   _id: MatcheId
   answer: AnswerType
   answers: [
@@ -30,6 +30,10 @@ Player =
   _id: PlayerId
 
 ###
+
+AnswerType =
+  YES : 'Yes'
+  NO : 'No'
 
 Players = new Meteor.Collection "players"
 Matches = new Meteor.Collection "matches"

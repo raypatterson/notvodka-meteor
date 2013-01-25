@@ -1,0 +1,12 @@
+<template name="buttons">
+
+  <div class="center">
+
+    <button class="btn btn-fixed-width btn-match btn-info" id="yes" type="button">Start</button>
+
+    {{#each list}}
+    <button class="btn btn-fixed-width btn-answer {{style}}" id="{{answer}}" type="button" {{disabled}}>{{answer}}</button>
+    {{/each}}
+  </div>
+  
+</template>

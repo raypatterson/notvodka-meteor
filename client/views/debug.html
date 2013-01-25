@@ -1,0 +1,24 @@
+<template name="debug">
+
+  {{#if active}}
+
+  <div id="debug-console" class="alpha10">
+
+    <h3>Debug Console</h3>
+
+    <h4>Correct Answer</h4>
+
+    {{match.correctAnswerType}}
+    
+    <h4>Answer History</h4>
+
+    {{#each answers}}
+      {{type}}
+      <br>
+    {{/each}}
+
+  </div>
+
+  {{/if}}
+
+</template>

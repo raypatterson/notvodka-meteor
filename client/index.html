@@ -3,27 +3,16 @@
 </head>
 
 <body>
+
+  {{> debug}}
+
   <header>
-    <h1>Is it vodka?</h1>
+    <h1 class="center">Is it vodka?</h1>
   </header>
 
   <section>
-    {{> play}}
+    {{> buttons}}
+    {{> results}}
   </section>
+
 </body>
-
-<template name="play">
-  {{> buttons}}
-  {{> answers}}
-</template>
-
-<template name="buttons">
-  <button class="btn btn-choice btn-success" id="yes" type="button">Yes</button>
-  <button class="btn btn-choice btn-danger" id="no" type="button">No</button>
-</template>
-
-<template name="answers">
-  {{#each list}}
-  <p>{{.}}</p>
-  {{/each}}
-</template>
